@@ -1,0 +1,43 @@
+\doxysection{serial.\+h}
+\hypertarget{serial_8h_source}{}\label{serial_8h_source}\mbox{\hyperlink{serial_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SERIAL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SERIAL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QSerialPort>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QSerialPortInfo>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_serial}{Serial}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_serial}{Serial}}\&\ \mbox{\hyperlink{class_serial_a79626f78dd6d3b1e27f619f829235348}{instance}}();}
+\DoxyCodeLine{00030\ \ \ \ \ QSerialPort*\ \mbox{\hyperlink{class_serial_a3190538315c358c85534966595425a6e}{port}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_serial_aae849d4cb2b0aee6fb2af1a142e054d4}{openPort}}(\textcolor{keyword}{const}\ QString\ \&portName,\ \textcolor{keywordtype}{int}\ baudRate,\ QSerialPort::DataBits\ dataBits,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QSerialPort::Parity\ parity,\ QSerialPort::StopBits\ stopBits,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QSerialPort::FlowControl\ flowControl);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_serial_aea99b79e566257d7b251740e3c687d2c}{closePort}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_serial_a805dee7ef2674a18f3dc7f7efd8af3ae}{writeData}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00059\ \ \ \ \ QByteArray\ \mbox{\hyperlink{class_serial_af47f36dce80750d8dceb0ab0ec0a5fb5}{readData}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_serial_adda4ed09582ac92c92b16b55b471a6d4}{Serial}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_serial_a7231b340879a81e03631d0c44330bb58}{\string~Serial}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_serial_a22d3db1e972a4b671b0a7f6995dd3d87}{Serial}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_serial}{Serial}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_serial}{Serial}}\&\ \mbox{\hyperlink{class_serial_afb68dd3f12a85974ea1b79fc8cfe6dbf}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_serial}{Serial}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ QSerialPort*\ \mbox{\hyperlink{class_serial_a36ef04edd45d79fbcf9f9e848a475aa8}{serialPort}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_serial_aeb7d6eacbdc61d3c5cb3b3a05d6255dc}{handleSerialError}}(QSerialPort::SerialPortError\ error);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ signals:}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_serial_a6d5864aa60e8b042b11ec59a2a07e174}{serialError}}(QString\ error);}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SERIAL\_H}}
+
+\end{DoxyCode}

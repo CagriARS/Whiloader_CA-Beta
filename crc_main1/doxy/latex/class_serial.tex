@@ -1,0 +1,252 @@
+\doxysection{Serial Class Reference}
+\hypertarget{class_serial}{}\label{class_serial}\index{Serial@{Serial}}
+
+
+Handles serial port communication.  
+
+
+
+
+{\ttfamily \#include $<$serial.\+h$>$}
+
+Inheritance diagram for Serial\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_serial}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_serial_a6d5864aa60e8b042b11ec59a2a07e174}{serial\+Error}} (QString error)
+\begin{DoxyCompactList}\small\item\em Signal emitted when a serial port error occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QSerial\+Port \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_serial_a3190538315c358c85534966595425a6e}{port}} ()
+\begin{DoxyCompactList}\small\item\em Get the QSerial\+Port object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_serial_aae849d4cb2b0aee6fb2af1a142e054d4}{open\+Port}} (const QString \&port\+Name, int baud\+Rate, QSerial\+Port\+::\+Data\+Bits data\+Bits, QSerial\+Port\+::\+Parity parity, QSerial\+Port\+::\+Stop\+Bits stop\+Bits, QSerial\+Port\+::\+Flow\+Control flow\+Control)
+\begin{DoxyCompactList}\small\item\em Open a serial port with the specified settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_serial_aea99b79e566257d7b251740e3c687d2c}{close\+Port}} ()
+\begin{DoxyCompactList}\small\item\em Close the currently open serial port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_serial_a805dee7ef2674a18f3dc7f7efd8af3ae}{write\+Data}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Write data to the serial port. \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_serial_af47f36dce80750d8dceb0ab0ec0a5fb5}{read\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the serial port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_serial}{Serial}} \& \mbox{\hyperlink{class_serial_a79626f78dd6d3b1e27f619f829235348}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of the \doxylink{class_serial}{Serial} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_serial_aeb7d6eacbdc61d3c5cb3b3a05d6255dc}{handle\+Serial\+Error}} (QSerial\+Port\+::\+Serial\+Port\+Error error)
+\begin{DoxyCompactList}\small\item\em Handle serial port errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_serial_adda4ed09582ac92c92b16b55b471a6d4}{Serial}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_serial}{Serial} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_serial_a7231b340879a81e03631d0c44330bb58}{\texorpdfstring{$\sim$}{\string~}\+Serial}} () override
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_serial}{Serial} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_serial_a22d3db1e972a4b671b0a7f6995dd3d87}{Serial}} (const \mbox{\hyperlink{class_serial}{Serial}} \&)=delete
+\item 
+\mbox{\hyperlink{class_serial}{Serial}} \& \mbox{\hyperlink{class_serial_afb68dd3f12a85974ea1b79fc8cfe6dbf}{operator=}} (const \mbox{\hyperlink{class_serial}{Serial}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QSerial\+Port \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_serial_a36ef04edd45d79fbcf9f9e848a475aa8}{serial\+Port}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles serial port communication. 
+
+The \doxylink{class_serial}{Serial} class provides functionalities to open, close, read from, and write to a serial port. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_serial_adda4ed09582ac92c92b16b55b471a6d4}\index{Serial@{Serial}!Serial@{Serial}}
+\index{Serial@{Serial}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{Serial()}{Serial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_serial_adda4ed09582ac92c92b16b55b471a6d4} 
+Serial\+::\+Serial (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}
+
+
+
+Constructor for the \doxylink{class_serial}{Serial} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent QObject, default is nullptr. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_serial_a22d3db1e972a4b671b0a7f6995dd3d87}\index{Serial@{Serial}!Serial@{Serial}}
+\index{Serial@{Serial}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{Serial()}{Serial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_serial_a22d3db1e972a4b671b0a7f6995dd3d87} 
+Serial\+::\+Serial (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_serial}{Serial}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_serial_aea99b79e566257d7b251740e3c687d2c}\index{Serial@{Serial}!closePort@{closePort}}
+\index{closePort@{closePort}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{closePort()}{closePort()}}
+{\footnotesize\ttfamily \label{class_serial_aea99b79e566257d7b251740e3c687d2c} 
+void Serial\+::close\+Port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Close the currently open serial port. 
+
+\Hypertarget{class_serial_aeb7d6eacbdc61d3c5cb3b3a05d6255dc}\index{Serial@{Serial}!handleSerialError@{handleSerialError}}
+\index{handleSerialError@{handleSerialError}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{handleSerialError}{handleSerialError}}
+{\footnotesize\ttfamily \label{class_serial_aeb7d6eacbdc61d3c5cb3b3a05d6255dc} 
+void Serial\+::handle\+Serial\+Error (\begin{DoxyParamCaption}\item[{QSerial\+Port\+::\+Serial\+Port\+Error}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handle serial port errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & The error code. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_serial_a79626f78dd6d3b1e27f619f829235348}\index{Serial@{Serial}!instance@{instance}}
+\index{instance@{instance}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \label{class_serial_a79626f78dd6d3b1e27f619f829235348} 
+\mbox{\hyperlink{class_serial}{Serial}} \& Serial\+::instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the singleton instance of the \doxylink{class_serial}{Serial} class. 
+
+Constructor for \doxylink{class_main_window}{Main\+Window}. Initializes user interface components and configures serial port settings.
+
+\begin{DoxyReturn}{Returns}
+Reference to the singleton instance of \doxylink{class_serial}{Serial}.
+\end{DoxyReturn}
+This constructor initializes the UI components, sets default values for the baud rate and other serial port settings, populates the serial port combo box with available ports, and connects UI signals to their respective slots.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent widget, typically nullptr for main windows. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_serial_aae849d4cb2b0aee6fb2af1a142e054d4}\index{Serial@{Serial}!openPort@{openPort}}
+\index{openPort@{openPort}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{openPort()}{openPort()}}
+{\footnotesize\ttfamily \label{class_serial_aae849d4cb2b0aee6fb2af1a142e054d4} 
+void Serial\+::open\+Port (\begin{DoxyParamCaption}\item[{const QString \&}]{port\+Name}{, }\item[{int}]{baud\+Rate}{, }\item[{QSerial\+Port\+::\+Data\+Bits}]{data\+Bits}{, }\item[{QSerial\+Port\+::\+Parity}]{parity}{, }\item[{QSerial\+Port\+::\+Stop\+Bits}]{stop\+Bits}{, }\item[{QSerial\+Port\+::\+Flow\+Control}]{flow\+Control}{}\end{DoxyParamCaption})}
+
+
+
+Open a serial port with the specified settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & The name of the port to open. \\
+\hline
+{\em baud\+Rate} & The baud rate for the connection. \\
+\hline
+{\em data\+Bits} & The number of data bits in each character. \\
+\hline
+{\em parity} & The parity setting for the connection. \\
+\hline
+{\em stop\+Bits} & The number of stop bits in each character. \\
+\hline
+{\em flow\+Control} & The flow control setting for the connection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_serial_afb68dd3f12a85974ea1b79fc8cfe6dbf}\index{Serial@{Serial}!operator=@{operator=}}
+\index{operator=@{operator=}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_serial_afb68dd3f12a85974ea1b79fc8cfe6dbf} 
+\mbox{\hyperlink{class_serial}{Serial}} \& Serial\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_serial}{Serial}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\Hypertarget{class_serial_a3190538315c358c85534966595425a6e}\index{Serial@{Serial}!port@{port}}
+\index{port@{port}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{port()}{port()}}
+{\footnotesize\ttfamily \label{class_serial_a3190538315c358c85534966595425a6e} 
+QSerial\+Port \texorpdfstring{$\ast$}{*} Serial\+::port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the QSerial\+Port object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the QSerial\+Port object. 
+\end{DoxyReturn}
+\Hypertarget{class_serial_af47f36dce80750d8dceb0ab0ec0a5fb5}\index{Serial@{Serial}!readData@{readData}}
+\index{readData@{readData}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}}
+{\footnotesize\ttfamily \label{class_serial_af47f36dce80750d8dceb0ab0ec0a5fb5} 
+QByte\+Array Serial\+::read\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Read data from the serial port. 
+
+\begin{DoxyReturn}{Returns}
+The data read from the serial port. 
+\end{DoxyReturn}
+\Hypertarget{class_serial_a6d5864aa60e8b042b11ec59a2a07e174}\index{Serial@{Serial}!serialError@{serialError}}
+\index{serialError@{serialError}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{serialError}{serialError}}
+{\footnotesize\ttfamily \label{class_serial_a6d5864aa60e8b042b11ec59a2a07e174} 
+void Serial\+::serial\+Error (\begin{DoxyParamCaption}\item[{QString}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when a serial port error occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & The error message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_serial_a805dee7ef2674a18f3dc7f7efd8af3ae}\index{Serial@{Serial}!writeData@{writeData}}
+\index{writeData@{writeData}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{writeData()}{writeData()}}
+{\footnotesize\ttfamily \label{class_serial_a805dee7ef2674a18f3dc7f7efd8af3ae} 
+void Serial\+::write\+Data (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Write data to the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_serial_a7231b340879a81e03631d0c44330bb58}\index{Serial@{Serial}!````~Serial@{\texorpdfstring{$\sim$}{\string~}Serial}}
+\index{````~Serial@{\texorpdfstring{$\sim$}{\string~}Serial}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Serial()}{\string~Serial()}}
+{\footnotesize\ttfamily \label{class_serial_a7231b340879a81e03631d0c44330bb58} 
+Serial\+::\texorpdfstring{$\sim$}{\string~}\+Serial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}
+
+
+
+Destructor for the \doxylink{class_serial}{Serial} class. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_serial_a36ef04edd45d79fbcf9f9e848a475aa8}\index{Serial@{Serial}!serialPort@{serialPort}}
+\index{serialPort@{serialPort}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{serialPort}{serialPort}}
+{\footnotesize\ttfamily \label{class_serial_a36ef04edd45d79fbcf9f9e848a475aa8} 
+QSerial\+Port\texorpdfstring{$\ast$}{*} Serial\+::serial\+Port\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{serial_8h}{serial.\+h}}\item 
+\mbox{\hyperlink{serial_8cpp}{serial.\+cpp}}\end{DoxyCompactItemize}

@@ -31,3 +31,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resource.qrc
+
+RC_ICONS += C:\Users\cagri\Desktop\logo.ico
+
+TARGET = Whiloader_CA_BETA
+

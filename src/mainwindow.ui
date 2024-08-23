@@ -11,11 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Whiloader_CA Beta</string>
+   <string>Whiloader_CA</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resource.qrc">
-    <normaloff>:/image/logos/image/logo.png</normaloff>:/image/logos/image/logo.png</iconset>
+   <iconset>
+    <normaloff>logo.ico</normaloff>logo.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -51,10 +51,10 @@
          <number>-1</number>
         </property>
         <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
+         <enum>QFrame::Shape::StyledPanel</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
+         <enum>QFrame::Shadow::Raised</enum>
         </property>
        </widget>
       </item>
@@ -72,7 +72,7 @@
           <item>
            <widget class="Line" name="line_4">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -86,7 +86,7 @@
           <item>
            <widget class="Line" name="line_10">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -102,7 +102,7 @@
         <item>
          <widget class="Line" name="line_14">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
          </widget>
         </item>
@@ -114,7 +114,7 @@
           <item>
            <widget class="Line" name="line_9">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -124,7 +124,7 @@
           <item>
            <widget class="Line" name="line_11">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -145,7 +145,7 @@
           <item>
            <widget class="Line" name="line_2">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -159,7 +159,7 @@
           <item>
            <widget class="Line" name="line_3">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -175,7 +175,7 @@
         <item>
          <widget class="Line" name="line_7">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
          </widget>
         </item>
@@ -197,7 +197,7 @@
              </sizepolicy>
             </property>
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -207,7 +207,7 @@
           <item>
            <widget class="Line" name="line_5">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -223,7 +223,7 @@
         <item>
          <spacer name="horizontalSpacer_5">
           <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+           <enum>Qt::Orientation::Horizontal</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -250,7 +250,7 @@
         <item>
          <spacer name="horizontalSpacer">
           <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+           <enum>Qt::Orientation::Horizontal</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -282,7 +282,7 @@
       <item row="4" column="0">
        <widget class="Line" name="line_16">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
        </widget>
       </item>
@@ -298,7 +298,7 @@
         <item>
          <widget class="Line" name="line_6">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
          </widget>
         </item>
@@ -312,7 +312,7 @@
         <item>
          <widget class="Line" name="line_8">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
          </widget>
         </item>
@@ -326,7 +326,7 @@
         <item>
          <widget class="Line" name="line_12">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
          </widget>
         </item>
@@ -351,7 +351,7 @@
         <item>
          <widget class="Line" name="line_13">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
          </widget>
         </item>
@@ -365,7 +365,7 @@
         <item>
          <widget class="Line" name="line_15">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
          </widget>
         </item>
@@ -373,6 +373,20 @@
          <widget class="QCheckBox" name="checkBox_protocol">
           <property name="text">
            <string>Whilone Protocol</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_32">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_autoConnect">
+          <property name="text">
+           <string>Auto Connection</string>
           </property>
          </widget>
         </item>
@@ -391,7 +405,7 @@
       <item row="7" column="0">
        <widget class="Line" name="line_17">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
        </widget>
       </item>
@@ -459,7 +473,7 @@
            <item>
             <widget class="Line" name="line_31">
              <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+              <enum>Qt::Orientation::Horizontal</enum>
              </property>
             </widget>
            </item>
@@ -477,7 +491,7 @@
                <item>
                 <widget class="Line" name="line_30">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -491,7 +505,7 @@
                <item>
                 <widget class="Line" name="line_29">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -505,7 +519,7 @@
                <item>
                 <widget class="Line" name="line_28">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -519,7 +533,7 @@
                <item>
                 <widget class="Line" name="line_27">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -533,7 +547,7 @@
                <item>
                 <widget class="Line" name="line_26">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -547,7 +561,7 @@
                <item>
                 <widget class="Line" name="line_25">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -563,7 +577,7 @@
              <item>
               <widget class="Line" name="line_18">
                <property name="orientation">
-                <enum>Qt::Vertical</enum>
+                <enum>Qt::Orientation::Vertical</enum>
                </property>
               </widget>
              </item>
@@ -582,7 +596,7 @@
                <item>
                 <widget class="Line" name="line_24">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -592,7 +606,7 @@
                <item>
                 <widget class="Line" name="line_23">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -602,7 +616,7 @@
                <item>
                 <widget class="Line" name="line_22">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -612,7 +626,7 @@
                <item>
                 <widget class="Line" name="line_21">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -622,7 +636,7 @@
                <item>
                 <widget class="Line" name="line_20">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -632,7 +646,7 @@
                <item>
                 <widget class="Line" name="line_19">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                 </widget>
                </item>
@@ -646,7 +660,7 @@
            <item>
             <spacer name="verticalSpacer">
              <property name="orientation">
-              <enum>Qt::Vertical</enum>
+              <enum>Qt::Orientation::Vertical</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -686,8 +700,6 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

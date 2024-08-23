@@ -23,12 +23,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow),
     serial(Serial::instance()),
     isConnected(false),
+    userDisconnected(),
     isEnlarged(false),
-    originalWidth(600),
-    enlargedWidth(1150)
+    originalWidth(500),
+    enlargedWidth(1275)
 {
     ui->setupUi(this);
-
 
     auto ports = QSerialPortInfo::availablePorts();
     for (const QSerialPortInfo &port : ports)
@@ -71,7 +71,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QTimer *statusTimer = new QTimer(this);
     connect(statusTimer, &QTimer::timeout, this, &MainWindow::checkDeviceStatus);
-    statusTimer->start(1000);
+    statusTimer->start(250);
 
     ui->lineEdit_2->setEnabled(false);
     ui->pushButton_Send->setEnabled(false);
@@ -126,6 +126,8 @@ void MainWindow::updateBaudRate()
 
 void MainWindow::on_pushButton_Connect_toggled(bool checked)
 {
+    userDisconnected = !checked;
+
     if(checked == true) /* With first press */
     {
         QString portName = ui->select->currentText(); /*Gets the selected port name*/
@@ -245,7 +247,7 @@ void MainWindow::on_pushButton_Connect_toggled(bool checked)
 
             qDebug() << "Disconnection happened";
         }
-        serial.closePort();/* Closes the connection */
+        serial.closePort(); /* Closes the connection */
 
         /*
          * Enables changing selected parameters after disconnection
@@ -387,7 +389,14 @@ void MainWindow::receiveMessage()
         }
         else
         {
-            ui->textBrowserlog->append("Received: " + QString::fromUtf8(data));
+            if (ui->checkBox_Recived->isChecked())
+            {
+                ui->textBrowserlog->append(QString::fromUtf8(data));
+            }
+            else
+            {
+                ui->textBrowserlog->append("Received: " + QString::fromUtf8(data));
+            }
         }
     }
     else
@@ -471,15 +480,7 @@ void MainWindow::receiveMessage()
             logMessage += "Host CRC: " + QString::number(calculatedCrc, 16).toUpper() + "\n";
         }
 
-        if (ui->checkBox_Recived->isChecked())
-        {
-            ui->textBrowserlog->append(logMessage);
-        }
-        else
-        {
-            ui->textBrowserlog->append("Received:\n" + logMessage);
-        }
-
+        ui->textBrowserlog->append(logMessage);
         qDebug() << logMessage;
     }
 }
@@ -898,11 +899,28 @@ void MainWindow::checkDeviceStatus()
             qDebug() << "Connection lost. Prompting user for reconnection.";
             isConnected = false;
 
-            // Check if the message box has already been shown
-            if (!reconnectMessageBoxShown)
+            if (ui->checkBox_autoConnect->isChecked())
             {
-                showReconnectMessageBox();
-                reconnectMessageBoxShown = true;  // Set flag to true after showing the message box
+                reconnectDevice();
+                if (serial.port()->isOpen())
+                {
+                    qDebug() << "Reconnection successful.";
+                    isConnected = true;
+                }
+                else
+                {
+                    qDebug() << "Reconnection failed.";
+                    isConnected = false;
+                }
+            }
+            else
+            {
+                isConnected = false;
+                if (!reconnectMessageBoxShown && !userDisconnected)
+                {
+                    showReconnectMessageBox();
+                    reconnectMessageBoxShown = true;  // Set flag to true after showing the message box
+                }
             }
         }
     }
@@ -942,4 +960,6 @@ void MainWindow::on_pushButton_enlarge_clicked()
     frameGeometry.moveCenter(screen->availableGeometry().center());
     this->move(frameGeometry.topLeft());
 }
+
+
 

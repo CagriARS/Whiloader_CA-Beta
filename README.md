@@ -8,4 +8,4 @@ Data can be transmitted with the WHILONE TECH's protocol and a file can be parse
 Received messages from the serial port can be stored in the machine as a txt or CSV file. 
 
 
-Windows Setup.exe: [https://github.com/CagriARS/Whiloader_CA-Beta/releases/tag/V1](https://github.com/CagriARS/Whiloader_CA-Beta/releases/tag/V2)
+Windows Setup.exe: https://github.com/CagriARS/Whiloader_CA-Beta/releases/tag/V2
